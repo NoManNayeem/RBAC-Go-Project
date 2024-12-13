@@ -1,0 +1,59 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+
+# Compiled files
+*.out
+*.exe
+*.o
+*.so
+*.a
+*.pyc
+*.pyo
+*.class
+*.jar
+*.war
+*.ear
+
+# General .env Rules
+.env
+!.env.example
+
+# Go-Backend Specific
+/Go-Backend/main
+/Go-Backend/bin/
+/Go-Backend/pkg/
+/Go-Backend/*.log
+/Go-Backend/tmp/
+/Go-Backend/go.sum
+
+# React-Frontend Specific
+/react-frontend/node_modules/
+/react-frontend/build/
+/react-frontend/dist/
+/react-frontend/yarn.lock
+/react-frontend/package-lock.json
+/react-frontend/coverage/
+/react-frontend/*.log
+/react-frontend/npm-debug.log*
+/react-frontend/.cache/
+/react-frontend/public/*.map

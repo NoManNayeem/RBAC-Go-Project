@@ -1,0 +1,34 @@
+services:
+  backend:
+    build:
+      context: ./Go-Backend
+    ports:
+      - "8080:8080"
+    networks:
+      - backend-network
+      - shared-network
+    environment:
+      DB_SERVER: ${DB_SERVER}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+
+  frontend:
+    build:
+      context: ./React-Frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend-network
+      - shared-network
+    environment:
+      REACT_APP_API_URL: ${REACT_APP_API_URL}
+
+networks:
+  backend-network:
+    driver: bridge
+  frontend-network:
+    driver: bridge
+  shared-network:
+    driver: bridge
